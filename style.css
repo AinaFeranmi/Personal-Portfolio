@@ -61,6 +61,7 @@ h5 {
     width: 63%;
     line-height: 1.5;
     margin: 0 auto 3rem;
+    text-align: center;
 }
 
 img {
@@ -307,4 +308,175 @@ section#services {
 
 .services__card:hover a {
     margin-left: 1rem;
+}
+
+/* =================== PORTFOLIO ==================== */
+#portfolio {
+    background: var(--color-light);
+}
+
+.portfolio__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.portfolio__head h3 {
+    width: 25%;
+}
+
+.portfolio__head-right {
+    width: 49%;
+}
+
+.portfolio__head-right a {
+    margin-top: 1.4rem;
+    display: inline-block;
+    color: var(--color-primary);
+    transition: all 400ms ease;
+}
+
+.portfolio__head-right a:hover {
+    margin-left: 1rem;
+}
+
+.portfolio__projects {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.portfolio__project {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 1rem;
+}
+
+.portfolio__project-image {
+    height: 20rem;
+    display: block;
+    border: 1rem solid var(--color-white);
+    overflow: hidden;
+    box-shadow: 0 0 1.6rem var(--color-primary-variant);
+    transition: all 400ms ease;
+}
+
+.portfolio__project-image:hover {
+    box-shadow: none;
+}
+
+.portfolio__project-image img {
+    transform: 0;
+    transition: all 12s ease;
+}
+
+.portfolio__cta {
+    display: flex;
+    gap: 1rem;
+}
+
+/* 18rem because image height is 20rem + 1rem of border top and bottom */
+.portfolio__project-image:hover img {
+    transform: translateY(calc(-100% + 18rem));
+}
+
+/* =================== TESTIMONIALS ==================== */
+#testimonials h2 {
+    text-align: center;
+}
+
+.testimonials__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    background: var(--color-light);
+    padding: 3rem;
+    font-size: 0.88rem;
+    border: 1px solid transparent;
+    transition: all 400ms ease;
+}
+
+.testimonial:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    color: var(--color-primary);
+    box-shadow: 0.2rem 3rem var(--color-primary-variant);
+    z-index: 1;
+}
+
+.avatar {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+}
+
+.testimonial__client {
+    display: flex;
+    gap: 1rem;
+}
+
+/* =================== CONTACT ==================== */
+#contact {
+    background: var(--color-primary);
+    color: var(--color-white);
+    margin: 0;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    font-size: 0.9rem;
+}
+
+.contact__container h2 {
+    color: var(--color-white);
+}
+
+.companies__container p {
+    margin: 1rem 0 2rem;
+}
+
+.contact__socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact__socials a {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    transition: all 400ms ease;
+}
+
+.contact__socials a:hover {
+    color: var(--color-black);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+form input, textarea {
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    background: var(--color-primary);
+    padding: 1.2rem 0;
+    color: var(--color-white);
+    border-top: 1px solid var(--color-black);
 }
